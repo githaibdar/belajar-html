@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Belajar tabel</title>
+</head>
+<body>
+<h3>Struktur tabel</h3>
+<p>Tabel memiliki struktur<br>
+Kotak berjajar horizontal disebut baris, sementara kotak berjajar vertikal disebut kolom. Satu kotak yang berisi data disebut cell/data</p>
+<p>Tag yang digunakan untuk membuat tabel adalah tag "<i>table</i>". Tag tersebur digunakan untuk memberitahu bahwa kita akan membuat tabel. Kemudian di dalamnya kita akan memberitahu bahwa kita akan membuat baris dengan menggunakan tag "tr". Di dalam tag "tr" ada tag "td" yang akan diisi data yang akan kita masukkan pada setiap <i>cell</i><br>Ini adalah struktur tabel sederhana. Ini contohnya</p>
+<table>
+	<tr>
+		<td>baris 1 kolom 1</td>
+		<td>baris 1 kolom 2</td>
+	</tr>
+	<tr>
+		<td>baris 2 kolom 1</td>
+		<td>baris 2 kolom 2</td>
+	</tr>
+</table>
+<p>Pada contoh diatas terdapat 2 baris dan 2 kolom yang menghasilkan 4 <i>cell</i> namun <i>border</i> atau garis tabelnya belum terlihat
+	<br>Struktur yang digunakan pada contoh pertama adalah tabel dengan struktur sederhana. Ada tabel yang menggunakan struktur yang lebih kompleks karena meggunakan heade. Struktur tagnya adalah <i>table</i>, didalamnya terdapat <i>theader</i>dan <i>tbody</i>. <i>Theader</i> merupakan tag yang memberi tahu bahwa kita akan membuat sebuah <i>header</i> di dalamnya terdapat tag th pertama yang tidak diisi apa apa. Kemudian tag th selanjutnya diisi nama kolom. Sementara <i>tbody</i> digunakan untuk memberi tahu kita akan membuat <i>bodu</i> tabel. Di dalam tag <i>body</i> terdapat tag tr yang digunakan untuk membuat baris. Didalam tag tr terdapat tag th yang diisi nama header vertical diikuti tag td yang diisi data. Contohnya seperti ini.</p>
+	<table>
+		<thead>
+			<th></th>
+			<th>Kolom 1</th>
+			<th>Kolom 2</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1 kolom 1</td>
+				<td>Baris 1 Kolom 2</td>
+			</tr>
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2 kolom 1</td>
+				<td>Baris 2 kolom 2</td>
+			</tr>
+		</tbody>
+	</table>
+<p>Tabel diatas belum memiliki border atau garis tabel. Untuk membuat border dan mengaturnya ada 5 atribut yang dapat digunakan pada tag tabel yaitu
+</p>
+<ul>
+	<li>border</li>
+	<li>cellspacing</li>
+	<li>cellpadding</li>
+	<li>colspan</li>
+	<li>rowspan</li>
+</ul>
+<p>attribut border digunakan untuk memberikan garis pada tabel. Value yang diminta adalah ketebalan garisnya dalam ukuran pixel. Berikut adalah contohnya</p>
+	<table border="1">
+		<thead>
+			<th></th>
+			<th>Kolom 1</th>
+			<th>Kolom 2</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1 kolom 1</td>
+				<td>Baris 1 Kolom 2</td>
+			</tr>
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2 kolom 1</td>
+				<td>Baris 2 kolom 2</td>
+			</tr>
+		</tbody>
+	</table>
+<p>Dapat dilihat pada tabel, antar <i>cell</i> memiliki jarak. Itu dikarenakan saat menggunakan atribut <i>border</i>, secara otomatis <i>cellspacing juga aktif</i>. Jika ingin menghilangkan jarak atau menambah jarak maka gunakan atribut <i>cellspacing</i> setelah atribut <i>border</i>. Ini adalah contoh penggunaan <i>cellspacing</i> dengan value 0.</p>
+<table border="1" cellspacing="0">
+		<thead>
+			<th></th>
+			<th>Kolom 1</th>
+			<th>Kolom 2</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1 kolom 1</td>
+				<td>Baris 1 Kolom 2</td>
+			</tr>
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2 kolom 1</td>
+				<td>Baris 2 kolom 2</td>
+			</tr>
+		</tbody>
+	</table>
+<p>Bila dilihat lagi, jarak antara tulisan dan garis terlalu berdempet. Ini bisa diatasi dengan menambahkan <i>cellpadding</i>. Misalkan ditambahkan <i>cellpadding</i> dengan value 5 menjadi seperti berikut</p>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<thead>
+			<th></th>
+			<th>Kolom 1</th>
+			<th>Kolom 2</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1 kolom 1</td>
+				<td>Baris 1 Kolom 2</td>
+			</tr>
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2 kolom 1</td>
+				<td>Baris 2 kolom 2</td>
+			</tr>
+		</tbody>
+	</table>
+<p></p>
+</body>
+</html>
