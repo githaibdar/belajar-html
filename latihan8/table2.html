@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Merge table</title>
+</head>
+<body>
+	<h3>Pengabungan tabel</h3>
+<table border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>1,1</td>
+		<td>1,2</td>
+		<td>1,3</td>
+	</tr>
+	<tr>
+		<td>2,1</td>
+		<td>2,2</td>
+		<td>2,3</td>
+	</tr>
+	<tr>
+		<td>3,1</td>
+		<td>3,2</td>
+		<td>3,3</td>
+	</tr>
+</table>
+<p>Untuk membuat <i>cell</i>pada satu kolom tergabung dengan kolom setelahnya, gunakan atribut "colspan" dengan nilai berisi jumlah <i>cell</i> gabungan yang ingin dibuat. Misalnya saya ingin membuat tabel dengan cell kolom 2 dan 3 pada baris pertama tergabung. Maka saya buat kolom 1 baris satu seperti biasa, kemudian membuat kolom 2 dengan atribut colspan dan nilainya 2. Nilai 2 adalah jumlah kolom gabungan yang ingin dibuat yaitu kolom 2 dan 3. Hasilnya seperti ini</p>
+	<table border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>1,1</td>
+		<td colspan="2">colspan = 2</td>
+	</tr>
+	<tr>
+		<td>2,1</td>
+		<td>2,2</td>
+		<td>2,3</td>
+	</tr>
+	<tr>
+		<td>3,1</td>
+		<td>3,2</td>
+		<td>3,3</td>
+	</tr>
+</table>
+<p>Untuk membuat 2 atau lebih <i>cell</i> gabungan pada kolom yang sama di baris yang berbeda, gunakan atribut <i>rowspan</i> dengan nilai yang diisi jumlah <i>cell</i> yang akan digabung. Misalnya kita akan menggabungkan setiap cell kolom 1 di ketiga baris. Gunakan atribut <i>rowspan</i> pada <i>cell</i> pertama yang akan digabung dengan nilai atribut jumlah <i>cell</i> yang akan digabung. Pada baris selanjutnya tidak perlu lagi menuliskan tag untuk cell yang akan digabung. Langsung tuliskan tag untuk <i>cell</i> berikutnya pada baris tersebut. Hasilnya jadi seperti ini.</p>
+<table border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td rowspan="3">rowspan = 3</td>
+		<td colspan="2">colspan = 2</td>
+	</tr>
+	<tr>
+		<td>2,2</td>
+		<td>2,3</td>
+	</tr>
+	<tr>
+		<td>3,2</td>
+		<td>3,3</td>
+	</tr>
+</table>
+<h3>Tugas latihan dari pak Dhika</h3>
+<table border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>1,1</td>
+		<td>1,2</td>
+		<td>1,3</td>
+		<td>1,4</td>
+	</tr>
+	<tr>
+		<td>2,1</td>
+		<td colspan="2" rowspan="2">?</td>
+		<td>2,4</td>
+	</tr>
+	<tr>
+		<td>3,1</td>		
+		<td>3,4</td>
+	</tr>
+	<tr>
+		<td>4,1</td>
+		<td>4,2</td>
+		<td>4,3</td>
+		<td>4,4</td>
+	</tr>
+</table>
+<p><strong>BERHASIL</strong></p>
+</body>
+</html>
