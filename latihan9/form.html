@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Form</title>
+</head>
+<body>
+<h1>FORM</h1>
+<p>Tag untuk membuat form adalah "form". Didalam form masih ada tag lagi yang menjadi elemen-elemen form, diantaranya adalah:</p>
+<ul>
+	<li>input</li>
+	<p>Digunakan untuk meng-<i>input</i> sesuatu</p>
+	<li>textarea</li>
+	<p>Untuk memasukkan text yang panjang, misalnya komentar, email, <i>posting</i> Facebook</p>
+	<li>select</li>
+	<p>Digunakan untuk membuat <i>dropdown</i></p>
+	<li>button</li>
+	<p>Tombol untuk mengirimkan data atau melakukan hal spesifik</p>
+	<li>label</li>
+	<p>Untuk menandai sebuah elemen <i>input</i></p>
+</ul>
+<h2>Input</h2>
+<p>Tag <i>input</i> disertai atribut <i>type</i> yang digunakan bagi kita untuk memilih membuat <i>input</i> tipe apa. <i>Type input</i> yaitu:</p>
+<ul>
+	<li>Text</li>
+	<li>Password</li>
+	<li>Radio</li>
+	<li>Checkbox</li>
+	<li>Submit</li>
+	<li>Reset</li>
+	<li>Button</li>
+</ul>
+<h3>Input <i>text</i></h3>
+<p>Atribut <i>text</i> digunakan untuk meng-<i>input</i> teks. Misalnya kita akan membuat form <i>username</i>. Pada pembuatan form, jangan gunakan tag "p" untuk tulisan tapi gunakan tag "label". Didalam tag label gunakan atribut "for" untuk menandai label tersebut digunakan untuk form apa. Misalnya kita akan gunakan "username" untuk <i>value</i> "for" nya. Setelah itu buat <i>"text"</i> <i>field</i>-nya dengan tag <i>"input"</i> dan attribut <i>"text"</i>. Tambahkan juga atribut "id" dan isi valuenya sama dengan value atribut for pada tag label, yaitu <i>"username"</i>.</p>
+<p>Atribut <i>for</i> dan <i>id</i> ini digunakan untuk menghubungkan tag label dan <i>text</i>. Fungsinya adalah saat meng-klik tulisan yang dibuat dengan tag label, kita bisa langsung mengisi <i>text field input text</i>-nya. Contohnya seperti ini.</p>
+<form>
+	<label for="username">Nama pengguna</label>
+	<input type="text" id="username">
+</form>
+<p>Hal yang sama berlaku juga untuk <i>password</i>. Perbedaannya, kata yang dimasukkan pada kolom <i>password</i> tidak akan ditampilkan. Contohnya seperti ini.</p>
+<form>
+	<label for="password">Kata sandi</label>
+	<input type="password" id="password">
+</form>
+<p>Selanjutnya adalah radio <i>type</i> atribut radio digunakan untuk membuat form pilihan, misalnya pria/wanita, bekerja/pelajar dan lain sebagainya. Cara membuatnya sama seperti tag <i>input</i> lainnya. Misalnya kita ingin membuat form pilihan jenis kelamin pria dan wanita. Kita buat dulu tag <i>input</i> untuk pilhan prianya menggunakan atribut <i>type</i> dengan <i>value</i> radio, gunakan juga atribut "id" untuk terhubung dengan tag label nanti. Pada <i>input</i> radio ini perlu ditambahkan atribut <i>name</i>. Atribut <i>name</i> ini berguna untuk mengelompokkan beberapa tag input radio agar pilihan yang dipilih nanti hanya bisa satu saja. Value name yang digunakan harus sama dengan tag lainnya yang satu kelompok. Dalam cotoh ini kita akan menggunakan <i>name</i> dengan value "jenis-kelamin" agar nanti hanya bisa memilih hanya satu diantara pria dan wanita. Setelah membuat tag pria berisi atribut <i>type, id</i> dan <i>name</i> baru buat label-nya agar posisi label ada di sebelah kanan pilihan. Kemudian buat tag input dan label untuk pilihan wanita, dan jangan lupa gunakan <i>value</i> "jenis-kelamin" untuk atribut <i>name</i>. Hasilnya akan menjadi seperti ini, hanya salah satu saja yang bisa dipilih</p>
+<form>
+	<input type="radio" name="jenis-kelamin" id="pria"><label for="pria">Pria</label>
+	<input type="radio" name="jenis-kelamin" id="wanita"><label for="wanita">Wanita</label>
+</form>
+<p>Seanjutnya form pilihan untuk memilih lebih dari satu pilihan menggunakan <i>"checkbox"</i>. Caranya sama seperti <i>"radio"</i>, Buat dulu <i>"input"</i>-nya baru kemudian labelnya agar kotak check berada di depan keterangan pilihan.</p>
+<form>
+	<input type="checkbox" id="klasifikasi"><label for="klasifikasi">Klasifikasi</label>
+	<input type="checkbox" id="katalogisasi"><label for="katalogisasi">Katalogisasi</label>
+	<input type="checkbox" id="literasi-informasi"><label for="literasi-informasi">Literasi Informasi</label>
+</form>
+<p>Setelah membuat isian <i>form</i> selanjutnya adalah membuat tombol kirim/<i>submit</i>, <i>reset</i> atau tombol lainnya. Untuk membuat itu dapat menggunakan input dengan attribut "submit, reset dan button". Misalnya kita akan membuat tombol submit, untuk membuat tulisan tombolnya menjadi kirim maka gunakan juga attribut <i>value</i> yang isinya "kirim". Hasilnya seperti ini.</p>
+<form>
+	<input type="submit" value="kirim!!!">
+</form>
+<p>Walau begitu, input button ini lebih baik tidak digunakan. Sebagai gantinya ada elemen button yang berisi <i>value input</i> yang sama <i>submit, reset</i> dan <i>button</i>. Perbedaannya tag <i>button</i> memiliki tag penutup, sehingga kata yang ingin dicantumkan pada tombol tidak perlu menggunakan <i>attribut value</i>. Hasilnya sama seperti berikut</p>
+<form>
+	<button type="submit">
+		Kirim!!
+	</button>
+</form>
+<h3><i>textarea</i></h3>
+<p><i>textarea</i> digunakan untuk mengisi dengan teks yang lebih banyak. Cukup gunakan tag <i>"textarea"</i> tanpa isian apapun sudah dapat bekerja</p>
+<form>
+	<textarea></textarea>
+</form>
+<h3><i>Dropdown/"select"</i></h3>
+<p>Elemen <i>form</i> <i>dropdown</i> menggunakan <i>tag</i> <i>"select"</i>. Untuk membuat pilihannya, gunakan <i>tag</i> <i>option</i> sebanyak yang dibutuhkan di dalam tag <i>"select"</i>, hasilnya seperti ini.</p>
+<form>
+	<select>
+		<option>Sekolah Dasar</option>
+		<option>Sekolah Menengah Pertama</option>
+		<option>Sekolah Menengah Atas/Kejuruan</option>
+		<option>Sarjana</option>
+		<option>Magister</option>
+		<option>Doktor</option>
+	</select>
+</form>
+<h3>Contoh form lengkap</h3>
+<form>
+	<label for="username">Nama pengguna:</label><input type="text" id="username">
+	<br>
+	<label for="password">Kata sandi:</label><input type="password" id="password">
+	<br>
+	<input type="radio" name="jenis-kelamin" id="pria"><label for="pria">Pria</label>
+	<input type="radio" name="jenis-kelamin" id="wanita"><label for="wanita">Wanita</label>
+	<br>
+	<input type="checkbox" id="klasifikasi"><label for="klasifikasi">Klasifikasi</label>
+	<input type="checkbox" id="katalogisasi"><label for="katalogisasi">Katalogisasi</label>
+	<input type="checkbox" id="literasi-informasi"><label for="literasi-informasi">Literasi Informasi</label>
+	<br>
+	<select>
+		<option>Sekolah Dasar</option>
+		<option>Sekolah Menengah Pertama</option>
+		<option>Sekolah Menengah Atas/Kejuruan</option>
+		<option>Sarjana</option>
+		<option>Magister</option>
+		<option>Doktor</option>
+	</select>
+	<br>
+	<textarea></textarea>
+	<br>
+	<button type="submit">
+		Kirim!!
+	</button>
+</form>
+<p>Form contoh diatas tidak rapih, ada cara untuk merapikannya tanpa css. Yaitu menggunakan tabel dengan menyesuaikan <i>padding</i> menjadi seperti ini</p>
+<form>
+	<table border="1" cellspacing="0" cellpadding="2">
+		<tr>			
+			<td><label for="username">Nama pengguna:</label></td>
+			<td><input type="text" id="username"></td>
+		</tr>
+		<tr>
+			<td><label for="password">Kata sandi:</label></td>
+			<td><input type="password" id="password"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="radio" name="jenis-kelamin" id="pria"><label for="pria">Pria</label>
+				<input type="radio" name="jenis-kelamin" id="wanita"><label for="wanita">Wanita</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="checkbox" id="klasifikasi"><label for="klasifikasi">Klasifikasi</label>
+				<input type="checkbox" id="katalogisasi"><label for="katalogisasi">Katalogisasi</label>
+				<input type="checkbox" id="literasi-informasi"><label for="literasi-informasi">Literasi Informasi</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<textarea></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button type="submit">
+					Kirim!!
+				</button>	
+			</td>
+		</tr> 
+	</table>
+</form>
+<p>Jika sudah seperti diatas, tinggal kita hilangkan bordernya menjadi seperti ini.</p>
+<form>
+	<table cellspacing="0" cellpadding="2">
+		<tr>			
+			<td><label for="username">Nama pengguna:</label></td>
+			<td><input type="text" id="username"></td>
+		</tr>
+		<tr>
+			<td><label for="password">Kata sandi:</label></td>
+			<td><input type="password" id="password"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="radio" name="jenis-kelamin" id="pria"><label for="pria">Pria</label>
+				<input type="radio" name="jenis-kelamin" id="wanita"><label for="wanita">Wanita</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="checkbox" id="klasifikasi"><label for="klasifikasi">Klasifikasi</label>
+				<input type="checkbox" id="katalogisasi"><label for="katalogisasi">Katalogisasi</label>
+				<input type="checkbox" id="literasi-informasi"><label for="literasi-informasi">Literasi Informasi</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<textarea></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button type="submit">
+					Kirim!!
+				</button>	
+			</td>
+		</tr> 
+	</table>
+</form>
+<p>Dengan begitu jadi terlihat lebih rapi.</p>
+</body> 
+</html>
